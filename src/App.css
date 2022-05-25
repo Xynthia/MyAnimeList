@@ -2,17 +2,34 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.title {
+  padding: 0;
+  margin: 0;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  margin: 0;
+}
+
+nav {
+  padding: 10px;
+}
+
+.rightButton {
+  float: right;
+}
+
+.loginForm {
+  border-color: #3f51b5;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
 }
