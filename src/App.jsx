@@ -13,8 +13,6 @@ function App() {
 
   const [TopAnimeData, setTopAnimeData] = useState([]);
 
-  const [status, setStatus] = useState([]);
-
   const [id, setId] = useState(1);
 
   useEffect(() => {
@@ -50,10 +48,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Profile" element={<Profile />} />
-          <Route
-            path="/Anime"
-            element={<Anime AnimeData={AnimeData} setStatus={setStatus} />}
-          />
+          <Route path="/Anime" element={<Anime AnimeData={AnimeData} />} />
         </Routes>
       </div>
     </>

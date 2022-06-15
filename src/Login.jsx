@@ -1,7 +1,11 @@
 import { auth } from "./firebase.config";
 import React, { useState } from "react";
 import { Button, TextField, Grid } from "@mui/material";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import {
+  browserSessionPersistence,
+  setPersistence,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { NavBar } from "./NavBar";
 import { useNavigate } from "react-router-dom";
 
@@ -50,6 +54,7 @@ export function Login() {
               <Button
                 variant="contained"
                 onClick={() => {
+                  setPersistence(auth, browserSessionPersistence);
                   signInWithEmailAndPassword(auth, email, password).then(() => {
                     navigate("/");
                   });
