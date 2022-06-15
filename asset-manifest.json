@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/MyAnimeList/static/css/main.c48f1944.css",
+    "main.js": "/MyAnimeList/static/js/main.91c69213.js",
+    "static/media/revicons.eot": "/MyAnimeList/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/MyAnimeList/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/MyAnimeList/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/MyAnimeList/index.html",
+    "main.c48f1944.css.map": "/MyAnimeList/static/css/main.c48f1944.css.map",
+    "main.91c69213.js.map": "/MyAnimeList/static/js/main.91c69213.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c48f1944.css",
+    "static/js/main.91c69213.js"
+  ]
+}
