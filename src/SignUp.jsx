@@ -1,12 +1,33 @@
-import { auth } from "./firebase.config";
-import React, { useState } from "react";
+import db, { auth } from "./firebase.config";
+import React, { useEffect, useState } from "react";
 import { Button, TextField, Grid } from "@mui/material";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { NavBar } from "./NavBar";
+import { addDoc, collection } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
-export function SignUp() {
+export function SignUp({ user }) {
+  let navigate = useNavigate();
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+  const addAnimeDoc = async () => {
+    console.log("user ", user);
+    await addDoc(collection(db, "users"), {
+      anime: [],
+      username: user.uid,
+    });
+  };
+
+  useEffect(() => {
+    if (user !== undefined && user !== null) {
+      console.log("user created!");
+      addAnimeDoc();
+      navigate("/");
+    }
+  }, [user]);
+
   return (
     <>
       <NavBar />
@@ -46,9 +67,9 @@ export function SignUp() {
             <Grid item>
               <Button
                 variant="contained"
-                onClick={() =>
-                  createUserWithEmailAndPassword(auth, email, password)
-                }
+                onClick={() => {
+                  createUserWithEmailAndPassword(auth, email, password);
+                }}
               >
                 SignUp
               </Button>

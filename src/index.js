@@ -7,7 +7,7 @@ import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="https://xynthia.github.io/MyAnimeList/">
+    <BrowserRouter basename="/MyAnimeList">
       <App />
     </BrowserRouter>
   </React.StrictMode>
